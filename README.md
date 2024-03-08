@@ -97,3 +97,21 @@ To check MLFLOW logging go to the gitlab link which is in this for
 - for gitlab server
 
     http://<your_endpoint>/<group/username>/<projectnameingitlabserver>/-/ml/experiments
+# NOTE
+
+As this project is used for gitlab or gitlab server to use Virtual machine as server follow following steps to get experiment data on VM
+
+- create a 5000 port in VM firewall in inbound section with name of mlflow
+- Install python in VM
+- Install Mlflow in VM
+- install mlflow[ssh] in your local machine
+- RUN command
+```bash
+    mlflow server --host 0.0.0.0 --port 5000
+```
+- Then change credentials in params.yaml file for uri http://<IP_address_of_vm>:5000
+
+- In main.py give artifact path like "ssh://<IP_address_of_vm>:5000/<path>"
+this path in ur VM
+
+- But for gitlab artifact path remain empty like this ''
