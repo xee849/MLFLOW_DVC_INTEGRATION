@@ -1,4 +1,5 @@
 mlflow
+mlflow[gitlab]
 dvc
 scikit-learn
 paramiko
