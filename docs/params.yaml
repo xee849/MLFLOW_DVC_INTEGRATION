@@ -1,0 +1,8 @@
+token: <your token>
+uri: <your gitlab or vm uri>
+hostname_vm: <remote server ip>
+port_vm: <port used mostly 22 for ssh server>
+username_vm: <your vm username>
+password_vm: <your vm password>
+folder_path_in_dvc: <foldername.file name.ext used wile uploading data through dvc>
+dvc_repo_url: <repo used for dvc reference>
